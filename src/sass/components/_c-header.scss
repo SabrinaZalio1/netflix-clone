@@ -1,0 +1,43 @@
+.c-header {
+
+    &__mobile {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 30px 25px;
+
+        @media only screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: none;
+
+        @media only screen and (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            padding: 30px 90px;
+        }
+    }
+
+    &__logo-img {
+        width: 115px;
+        height: 35px;
+
+    }
+
+    &__profile-img {
+        border-radius: 50%;
+        margin: 0;
+
+        @media only screen and (min-width: 992px) {
+            margin: 0 15px;
+        }
+    }
+
+    &__icon-space {
+        margin: 0 15px;
+    }
+}

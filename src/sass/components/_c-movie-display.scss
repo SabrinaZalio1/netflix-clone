@@ -1,0 +1,29 @@
+.c-movie-display {
+    &__title {
+        font-size: 75px;
+        font-weight: 700;
+        color: #64EEBC;
+        letter-spacing: 6px;
+        text-align: center;
+        width: 100%;
+
+        @media only screen and (min-width: 992px) {
+            font-size: 110px;
+            font-weight: 700;
+            text-align: left;
+            max-width: 90%;
+        }
+    }
+
+    &__subtitle {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 4px;
+
+        &--bold {
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.c-sidebar {
+    z-index: 10;
+    transition: all 20s linear;
+
+    &__menu {
+        width: 400px;
+        background-color: #242424;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        height: 100vh;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 5s, opacity 20s linear;
+    }
+
+    &__menu-links {
+        padding-left: 25px;
+    }
+
+    &__menu-link {
+        font-size: 16px;
+        color: #fff;
+        opacity: .5;
+        cursor: pointer;
+        margin: 20px 20px;
+        list-style: none;
+
+        &:hover {
+            opacity: 1;
+            transition: all .1s linear;
+        }
+
+        @media only screen and (min-width: 992px) {
+            font-size: 22px;
+        }
+    }
+
+    &__mobile-close-button {
+        display: block;
+        margin: 20px;
+
+        @media only screen and (min-width: 992px) {
+            display: none;
+            transition: all .2s linear;
+
+        }
+    }
+}
+
+.c-sidebar__menu-show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 5s, opacity 5s linear;
+    animation: fadeIn 1s;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,17 @@
+.c-movie-list {
+    min-height: 550px;
+}
+
+.movies-list-container {
+    background: linear-gradient(0deg, rgba(36, 36, 36, 1) 36%, rgba(36, 36, 36, 0.9584427521008403) 81%, rgba(36, 36, 36, 0.8435968137254902) 86%, rgba(36, 36, 36, 0.759563200280112) 91%, rgba(108, 108, 108, 0.6279105392156863) 97%, rgba(108, 108, 108, 0.006061799719887961) 99%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (min-width: 770px) {
+        background: transparent;
+        align-items: right;
+        width: 50%;
+    }
+}

@@ -1,0 +1,47 @@
+.c-large-button {
+    display: flex;
+    width: 220px;
+    height: 53px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    @media only screen and (min-width: 992px) {
+        margin-bottom: 0;
+
+        &--spacing {
+            margin-right: 24px;
+        }
+    }
+
+    &--black {
+        background-color: #242424;
+        color: #fff;
+        opacity: .8;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &--white {
+        background-color: #fff;
+        color: #242424;
+        opacity: .8;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &--translucent {
+        background: rgba(36, 36, 36, 0.5);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+
+    }
+}

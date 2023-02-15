@@ -1,0 +1,70 @@
+* {
+    font-family: 'Bebas Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.App {
+    height: 100vh;
+    // padding: 10px 25px;
+    background-size: cover;
+
+    @media only screen and (min-width: 992px) {
+        // padding: 10px 90px;
+    }
+}
+
+.app-container {
+    // padding: 10px 25px;
+
+    @media only screen and (min-width: 992px) {
+        padding: 10px 90px;
+    }
+}
+
+.c-white {
+    color: #fff;
+}
+
+.material-symbols-outlined {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.material-symbols--small {
+    font-size: 14px
+}
+
+.material-symbols--medium {
+    font-size: 40px
+}
+
+.material-symbol-filled {
+    color: #64EEBC;
+    font-variation-settings:
+        'FILL' 1,
+}
+
+.buttons-container {
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (min-width: 992px) {
+        flex-direction: row;
+    }
+}
+
+button:focus {
+    outline: none
+}
+
+.close:hover {
+    color: transparent
+}
+
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+
+@import 'components/index',
+'views/index'

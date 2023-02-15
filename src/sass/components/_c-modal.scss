@@ -1,0 +1,106 @@
+.c-modal {
+    color: #fff;
+
+    &__button {
+        margin: 0 30px;
+        width: 130px;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__button-text {
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        background-color: #242424;
+
+        @media only screen and (min-width: 992px) {
+            height: 400px;
+            width: 100%;
+        }
+    }
+
+    &__closing-tag {
+        font-size: 50px;
+        font-weight: 100;
+        color: #fff;
+        right: 15px;
+        top: 10px;
+        position: absolute;
+    }
+
+    &__title {
+        color: #64EEBC;
+        font-size: 20px;
+        margin-top: 45px;
+        font-weight: 700;
+        letter-spacing: 4px;
+    }
+
+    &__drop-file-container {
+        width: 80%;
+        height: 70px;
+        margin: 0 auto;
+        position: relative;
+        border: 2px dashed white;
+    }
+
+    &__clip-icon {
+        transform: rotate(145deg);
+    }
+
+    &__drop-file-section {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        padding: 70px 0 0 0;
+        overflow: hidden;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: transparent;
+    }
+
+    &__drop-file-text {
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    &__movie-title-section {
+        color: #fff;
+        outline: none;
+        font-weight: 600;
+        width: 25%;
+        min-width: 248px;
+        border-right: transparent;
+        background-color: transparent;
+        border-bottom: 2px solid #fff;
+
+        &::placeholder {
+            text-align: center;
+        }
+    }
+
+    &__loading-title {
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    &__cancel-text,
+    &__done-text {
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    &__done-text {
+        color: #64EEBC;
+    }
+}

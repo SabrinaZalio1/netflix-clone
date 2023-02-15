@@ -1,0 +1,49 @@
+.c-dropdown {
+    color: #fff;
+
+    &__button {
+        cursor: pointer;
+    }
+
+    &__button-type-text {
+        font-weight: 700;
+    }
+
+    &__modal {
+        width: 241px;
+        height: 96px;
+        padding: 12px 20px;
+        background-color: #242424;
+        top: 30px;
+        right: -38px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 75%;
+            top: -9px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #242424;
+            clear: both;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__modal-option {
+        font-size: 16px;
+        font-weight: 400;
+        list-style-type: none;
+        padding: 8px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--active {
+            font-weight: 600;
+        }
+    }
+}
