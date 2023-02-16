@@ -4,3 +4,5 @@
 
 
 ### BEM METHODOLOGY was use for the classes
+
+### Animate.css was used for small animations
