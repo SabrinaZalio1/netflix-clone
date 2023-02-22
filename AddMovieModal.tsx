@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LargeButton from './LargeButton'
-
+import logo from '../assets/liteflix.png';
 
 export default function AddMovieModal() {
 
@@ -50,8 +50,8 @@ export default function AddMovieModal() {
 
     return (
         <div className='c-modal'>
-            <button className='c-modal__button  d-flex align-items-center' type="button" data-toggle="modal" data-target="#exampleModalCenter">
-                <i className={`material-symbols-outlined c-white`}>add</i>
+            <button className='c-modal__button d-flex align-items-center' type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                <i className='material-symbols-outlined c-white'>add</i>
                 <span className='c-modal__button-text'>agregar pelicula</span>
             </button>
 
@@ -61,7 +61,7 @@ export default function AddMovieModal() {
                         <button className='c-modal__closing-tag close' type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h3 className='c-modal__title '>agregar pelicula</h3>
+                        <h3 className={`c-modal__title ${isSubmit && 'd-none'}`}>agregar pelicula</h3>
                         {
                             loadedImg ?
                                 showElement ?
@@ -72,7 +72,7 @@ export default function AddMovieModal() {
                                         </div>
                                         <span className='c-modal__cancel-text d-block text-right'>cancelar</span>
                                     </div>)
-                                    : (<div className='c-modal__loading-container mx-auto w-75'>
+                                    : (<div className={`c-modal__loading-container mx-auto w-75 ${isSubmit && 'd-none'}`}>
                                         <span className='c-modal__loading-title d-block text-left'>cargando 100%</span>
                                         <div className="progress my-3">
                                             <div className="progress-bar" role="progressbar" style={{ width: "100%", backgroundColor: ' #64EEBC' }} ></div>
@@ -80,13 +80,22 @@ export default function AddMovieModal() {
                                         <span className='c-modal__done-text d-block text-right'>listo!</span>
                                     </div>)
                                 :
-                                <div className='c-modal__drop-file-container d-flex align-items-center justify-content-center'>
+                                <div className={`c-modal__drop-file-container d-flex align-items-center justify-content-center `}>
                                     <i className="material-symbols-outlined c-modal__clip-icon c-white">attach_file </i>
                                     <label htmlFor="file" className="c-modal__drop-file-text">agrega un archivo o arrastralo y soltalo aqui</label>
                                     <input id='file' className='c-modal__drop-file-section' type="file" accept='image/*' multiple onChange={e => onImgChange(e)} />
                                 </div>
+
                         }
-                        <div>
+                        <div className={`${isSubmit ? 'd-block' : 'd-none'}`}>
+                            <img className="c-header__logo-img mb-5" src={logo} alt="liteflix logo" />
+                            <div>
+                                <p className='c-modal__success-title'>¡Felicitaciones!</p>
+                                <p className='c-modal__success-subtitle'>Liteflix The Movie fue correctamente subida.</p>
+                            </div>
+
+                        </div>
+                        <div className={`${isSubmit && 'd-none'}`}>
                             <input type="text" className='c-modal__movie-title-section' placeholder='titulo' onChange={handleChange} />
                         </div>
                         <div className='d-flex justify-content-center'>
