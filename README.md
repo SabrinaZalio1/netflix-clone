@@ -1,4 +1,4 @@
-# 🎬 LITEFLIX CHALLENGE
+# 🎬 NETFLIX CHALLENGE
 
 ## 📌 This proyect was created with React.JS, SASS and TYPESCRIPT 📌
 
